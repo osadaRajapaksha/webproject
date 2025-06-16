@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Cars - DriveEasy Car Rental</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-car"></i>
+                <span>DriveEasy</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html" class="active">Cars</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Fleet</h1>
+            <p>Choose from our wide selection of premium vehicles</p>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> > <span>Cars</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Cars Section -->
+    <section class="cars-section">
+        <div class="container">
+            <!-- Search and Filter -->
+            <div class="search-filter-section">
+                <div class="search-box">
+                    <input type="text" id="carSearch" placeholder="Search cars...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="car-filters">
+                    <button class="filter-btn active" data-filter="all">All Cars</button>
+                    <button class="filter-btn" data-filter="economy">Economy</button>
+                    <button class="filter-btn" data-filter="luxury">Luxury</button>
+                    <button class="filter-btn" data-filter="suv">SUV</button>
+                </div>
+                <div class="sort-options">
+                    <select id="sortCars">
+                        <option value="name">Sort by Name</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="seats">Number of Seats</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Cars Grid -->
+            <div class="cars-grid" id="carsGrid">
+                <!-- Economy Cars -->
+                <div class="car-card" data-category="economy" data-price="25" data-name="Toyota Corolla" data-seats="5">
+                    <img src="Toyota Corolla.jpeg" alt="Toyota Corolla">
+                    <div class="car-info">
+                        <h3>Toyota Corolla</h3>
+                        <p class="car-type">Economy</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 5 Seats</span>
+                            <span><i class="fas fa-cog"></i> Manual</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fas fa-snowflake"></i> A/C</span>
+                        </div>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Unlimited Mileage</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Full Insurance</span>
+                            </div>
+                        </div>
+                        <div class="car-price">$25/day</div>
+                        <a href="booking.html?car=Toyota Corolla&price=25" class="rent-btn">Rent Now</a>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="economy" data-price="30" data-name="Nissan Sentra" data-seats="5">
+                    <img src="Nissan Sentra.jpg" alt="Nissan Sentra">
+                    <div class="car-info">
+                        <h3>Nissan Sentra</h3>
+                        <p class="car-type">Economy</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 5 Seats</span>
+                            <span><i class="fas fa-cog"></i> Automatic</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fas fa-snowflake"></i> A/C</span>
+                        </div>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Unlimited Mileage</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Full Insurance</span>
+                            </div>
+                        </div>
+                        <div class="car-price">$30/day</div>
+                        <a href="booking.html?car=Nissan Sentra&price=30" class="rent-btn">Rent Now</a>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="economy" data-price="28" data-name="Hyundai Elantra" data-seats="5">
+                    <img src="Hyundai Elantra.jpeg" alt="Hyundai Elantra">
+                    <div class="car-info">
+                        <h3>Hyundai Elantra</h3>
+                        <p class="car-type">Economy</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 5 Seats</span>
+                            <span><i class="fas fa-cog"></i> Automatic</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fas fa-snowflake"></i> A/C</span>
+                        </div>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Unlimited Mileage</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Full Insurance</span>
+                            </div>
+                        </div>
+                        <div class="car-price">$28/day</div>
+                        <a href="booking.html?car=Hyundai Elantra&price=28" class="rent-btn">Rent Now</a>
+                    </div>
+                </div>
+
+                <!-- Luxury Cars -->
+                <div class="car-card" data-category="luxury" data-price="75" data-name="BMW 3 Series" data-seats="5">
+                    <img src="BMW 3 Series.jpg" alt="BMW 3 Series">
+                    <div class="car-info">
+                        <h3>BMW 3 Series</h3>
+                        <p class="car-type">Luxury</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 5 Seats</span>
+                            <span><i class="fas fa-cog"></i> Automatic</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fas fa-wifi"></i> GPS</span>
+                        </div>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <i class="fas fa-crown"></i>
+                                <span>Premium Interior</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-music"></i>
+                                <span>Premium Sound</span>
+                            </div>
+                        </div>
+                        <div class="car-price">$75/day</div>
+                        <a href="booking.html?car=BMW 3 Series&price=75" class="rent-btn">Rent Now</a>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="luxury" data-price="85" data-name="Mercedes C-Class" data-seats="5">
+                    <img src="Mercedes C-Class.jpeg" alt="Mercedes C-Class">
+                    <div class="car-info">
+                        <h3>Mercedes C-Class</h3>
+                        <p class="car-type">Luxury</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 5 Seats</span>
+                            <span><i class="fas fa-cog"></i> Automatic</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fas fa-wifi"></i> GPS</span>
+                        </div>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <i class="fas fa-crown"></i>
+                                <span>Premium Interior</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-music"></i>
+                                <span>Premium Sound</span>
+                            </div>
+                        </div>
+                        <div class="car-price">$85/day</div>
+                        <a href="booking.html?car=Mercedes C-Class&price=85" class="rent-btn">Rent Now</a>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="luxury" data-price="95" data-name="Audi A4" data-seats="5">
+                    <img src="Audi A4.jpeg" alt="Audi A4">
+                    <div class="car-info">
+                        <h3>Audi A4</h3>
+                        <p class="car-type">Luxury</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 5 Seats</span>
+                            <span><i class="fas fa-cog"></i> Automatic</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fas fa-wifi"></i> GPS</span>
+                        </div>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <i class="fas fa-crown"></i>
+                                <span>Premium Interior</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-music"></i>
+                                <span>Premium Sound</span>
+                            </div>
+                        </div>
+                        <div class="car-price">$95/day</div>
+                        <a href="booking.html?car=Audi A4&price=95" class="rent-btn">Rent Now</a>
+                    </div>
+                </div>
+
+                <!-- SUV Cars -->
+                <div class="car-card" data-category="suv" data-price="55" data-name="Honda CR-V" data-seats="7">
+                    <img src="Honda CR-V.jpeg" alt="Honda CR-V">
+                    <div class="car-info">
+                        <h3>Honda CR-V</h3>
+                        <p class="car-type">SUV</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 7 Seats</span>
+                            <span><i class="fas fa-cog"></i> Automatic</span>
+                            <span><i class="fas fa-gas-pump"></i> Hybrid</span>
+                            <span><i class="fas fa-mountain"></i> AWD</span>
+                        </div>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <i class="fas fa-suitcase"></i>
+                                <span>Large Cargo</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-road"></i>
+                                <span>All Terrain</span>
+                            </div>
+                        </div>
+                        <div class="car-price">$55/day</div>
+                        <a href="booking.html?car=Honda CR-V&price=55" class="rent-btn">Rent Now</a>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="suv" data-price="65" data-name="Ford Explorer" data-seats="7">
+                    <img src="Ford Explorer.jpeg" alt="Ford Explorer">
+                    <div class="car-info">
+                        <h3>Ford Explorer</h3>
+                        <p class="car-type">SUV</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 7 Seats</span>
+                            <span><i class="fas fa-cog"></i> Automatic</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fas fa-mountain"></i> AWD</span>
+                        </div>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <i class="fas fa-suitcase"></i>
+                                <span>Large Cargo</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-road"></i>
+                                <span>All Terrain</span>
+                            </div>
+                        </div>
+                        <div class="car-price">$65/day</div>
+                        <a href="booking.html?car=Ford Explorer&price=65" class="rent-btn">Rent Now</a>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="suv" data-price="70" data-name="Chevrolet Tahoe" data-seats="8">
+                    <img src="Chevrolet Tahoe.jpg" alt="Chevrolet Tahoe">
+                    <div class="car-info">
+                        <h3>Chevrolet Tahoe</h3>
+                        <p class="car-type">SUV</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 8 Seats</span>
+                            <span><i class="fas fa-cog"></i> Automatic</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fas fa-mountain"></i> 4WD</span>
+                        </div>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <i class="fas fa-suitcase"></i>
+                                <span>Extra Large Cargo</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-road"></i>
+                                <span>Heavy Duty</span>
+                            </div>
+                        </div>
+                        <div class="car-price">$70/day</div>
+                        <a href="booking.html?car=Chevrolet Tahoe&price=70" class="rent-btn">Rent Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No cars found</h3>
+                <p>Try adjusting your search or filter criteria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Book Your Car?</h2>
+            <p>Get started with your reservation today and enjoy the freedom of the road</p>
+            <a href="booking.html" class="cta-button">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-car"></i>
+                        <span>DriveEasy</span>
+                    </div>
+                    <p>Your trusted partner for reliable and affordable car rentals.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Cars</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="cars.html?filter=economy">Economy Cars</a></li>
+                        <li><a href="cars.html?filter=luxury">Luxury Cars</a></li>
+                        <li><a href="cars.html?filter=suv">SUVs</a></li>
+                        <li><a href="#">Long-term Rental</a></li>
+                        <li><a href="#">Corporate Rental</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="contact.html">Customer Support</a></li>
+                        <li><a href="#">Roadside Assistance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DriveEasy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

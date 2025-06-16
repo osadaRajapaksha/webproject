@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Car - DriveEasy Car Rental</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-car"></i>
+                <span>DriveEasy</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="booking.html" class="active">Book Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Book Your Car</h1>
+            <p>Complete your reservation in just a few simple steps</p>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> > <span>Book Now</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Booking Steps -->
+    <section class="booking-steps">
+        <div class="container">
+            <div class="steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Select Car</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Personal Info</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Confirmation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Car Selection -->
+    <section class="quick-selection">
+        <div class="container">
+            <h2>Quick Car Selection</h2>
+            <p>Don't have a car selected? Choose from our popular options below:</p>
+            <div class="quick-cars">
+                <div class="quick-car" onclick="selectQuickCar('Toyota Corolla', 25)">
+                    <img src="/placeholder.svg?height=100&width=150" alt="Toyota Corolla">
+                    <div class="quick-car-info">
+                        <h4>Toyota Corolla</h4>
+                        <span>$25/day</span>
+                    </div>
+                </div>
+                <div class="quick-car" onclick="selectQuickCar('BMW 3 Series', 75)">
+                    <img src="/placeholder.svg?height=100&width=150" alt="BMW 3 Series">
+                    <div class="quick-car-info">
+                        <h4>BMW 3 Series</h4>
+                        <span>$75/day</span>
+                    </div>
+                </div>
+                <div class="quick-car" onclick="selectQuickCar('Honda CR-V', 55)">
+                    <img src="/placeholder.svg?height=100&width=150" alt="Honda CR-V">
+                    <div class="quick-car-info">
+                        <h4>Honda CR-V</h4>
+                        <span>$55/day</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="cars.html" class="link-button">View All Cars</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-form-container">
+                    <h2>Reservation Details</h2>
+                    <form id="bookingForm" class="booking-form" action="booking.php" method="POST">
+                        <!-- Car Selection -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-car"></i> Selected Vehicle</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="selectedCar">Selected Car</label>
+                                    <input type="text" id="selectedCar" name="selectedCar" readonly placeholder="No car selected">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dailyRate">Daily Rate</label>
+                                    <input type="text" id="dailyRate" name="dailyRate" readonly placeholder="$0/day">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> Personal Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="driverLicense">Driver's License Number *</label>
+                                <input type="text" id="driverLicense" name="driverLicense" required>
+                            </div>
+                        </div>
+
+                        <!-- Rental Details -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-calendar"></i> Rental Period</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pickupDate">Pickup Date *</label>
+                                    <input type="date" id="pickupDate" name="pickupDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pickupTime">Pickup Time *</label>
+                                    <select id="pickupTime" name="pickupTime" required>
+                                        <option value="">Select Time</option>
+                                        <option value="08:00">8:00 AM</option>
+                                        <option value="09:00">9:00 AM</option>
+                                        <option value="10:00">10:00 AM</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="12:00">12:00 PM</option>
+                                        <option value="13:00">1:00 PM</option>
+                                        <option value="14:00">2:00 PM</option>
+                                        <option value="15:00">3:00 PM</option>
+                                        <option value="16:00">4:00 PM</option>
+                                        <option value="17:00">5:00 PM</option>
+                                        <option value="18:00">6:00 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="returnDate">Return Date *</label>
+                                    <input type="date" id="returnDate" name="returnDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="returnTime">Return Time *</label>
+                                    <select id="returnTime" name="returnTime" required>
+                                        <option value="">Select Time</option>
+                                        <option value="08:00">8:00 AM</option>
+                                        <option value="09:00">9:00 AM</option>
+                                        <option value="10:00">10:00 AM</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="12:00">12:00 PM</option>
+                                        <option value="13:00">1:00 PM</option>
+                                        <option value="14:00">2:00 PM</option>
+                                        <option value="15:00">3:00 PM</option>
+                                        <option value="16:00">4:00 PM</option>
+                                        <option value="17:00">5:00 PM</option>
+                                        <option value="18:00">6:00 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location Details -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-map-marker-alt"></i> Pickup & Return Locations</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pickupLocation">Pickup Location *</label>
+                                    <select id="pickupLocation" name="pickupLocation" required>
+                                        <option value="">Select Location</option>
+                                        <option value="downtown">Downtown Office - 123 Main St</option>
+                                        <option value="airport">Airport Terminal - Terminal 1</option>
+                                        <option value="mall">Shopping Mall - City Center Mall</option>
+                                        <option value="station">Train Station - Central Station</option>
+                                        <option value="hotel">Hotel District - Grand Hotel</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="returnLocation">Return Location *</label>
+                                    <select id="returnLocation" name="returnLocation" required>
+                                        <option value="">Select Location</option>
+                                        <option value="downtown">Downtown Office - 123 Main St</option>
+                                        <option value="airport">Airport Terminal - Terminal 1</option>
+                                        <option value="mall">Shopping Mall - City Center Mall</option>
+                                        <option value="station">Train Station - Central Station</option>
+                                        <option value="hotel">Hotel District - Grand Hotel</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Options -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-plus"></i> Additional Options</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="gps" value="yes">
+                                    <span class="checkmark"></span>
+                                    GPS Navigation (+$5/day)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="childSeat" value="yes">
+                                    <span class="checkmark"></span>
+                                    Child Safety Seat (+$3/day)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="additionalDriver" value="yes">
+                                    <span class="checkmark"></span>
+                                    Additional Driver (+$10/day)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="fullInsurance" value="yes">
+                                    <span class="checkmark"></span>
+                                    Full Coverage Insurance (+$15/day)
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Special Requests -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-comment"></i> Special Requests</h3>
+                            <div class="form-group">
+                                <label for="specialRequests">Additional Comments</label>
+                                <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any special requests or comments..."></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-check"></i> Complete Booking
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Booking Summary -->
+                <div class="booking-summary">
+                    <h3>Booking Summary</h3>
+                    <div class="summary-item">
+                        <span>Selected Car:</span>
+                        <span id="summaryCarName">Not selected</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Daily Rate:</span>
+                        <span id="summaryDailyRate">$0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Rental Period:</span>
+                        <span id="summaryPeriod">0 days</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Subtotal:</span>
+                        <span id="summarySubtotal">$0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Additional Options:</span>
+                        <span id="summaryExtras">$0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Taxes & Fees:</span>
+                        <span id="summaryTaxes">$0</span>
+                    </div>
+                    <hr>
+                    <div class="summary-total">
+                        <span>Total Cost:</span>
+                        <span id="summaryTotal">$0</span>
+                    </div>
+                    
+                    <div class="summary-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p>Final price includes all taxes and fees. No hidden charges.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-car"></i>
+                        <span>DriveEasy</span>
+                    </div>
+                    <p>Your trusted partner for reliable and affordable car rentals.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Cars</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="cars.html?filter=economy">Economy Cars</a></li>
+                        <li><a href="cars.html?filter=luxury">Luxury Cars</a></li>
+                        <li><a href="cars.html?filter=suv">SUVs</a></li>
+                        <li><a href="#">Long-term Rental</a></li>
+                        <li><a href="#">Corporate Rental</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="contact.html">Customer Support</a></li>
+                        <li><a href="#">Roadside Assistance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DriveEasy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

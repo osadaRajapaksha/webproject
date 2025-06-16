@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveEasy - Car Rental Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-car"></i>
+                <span>DriveEasy</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Your Perfect Ride</h1>
+            <p>Rent premium cars at affordable prices. Experience comfort and reliability on every journey with DriveEasy Car Rental.</p>
+            <div class="hero-buttons">
+                <a href="cars.html" class="cta-button">View Cars</a>
+                <a href="booking.html" class="cta-button secondary">Book Now</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/placeholder.svg?height=400&width=600" alt="Luxury Car">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose DriveEasy?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Safe & Secure</h3>
+                    <p>All our vehicles are regularly maintained and fully insured for your complete safety and peace of mind.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Best Prices</h3>
+                    <p>Competitive rates with no hidden fees. Get the best value for your money with transparent pricing.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support and roadside assistance for all your rental needs.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Multiple Locations</h3>
+                    <p>Convenient pickup and drop-off locations across the city, including airports and hotels.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-car"></i>
+                    <h3>Premium Fleet</h3>
+                    <p>Wide selection of well-maintained vehicles from economy cars to luxury SUVs.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Easy Booking</h3>
+                    <p>Simple online booking process with instant confirmation and flexible cancellation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Cars Available</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Locations</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Cars Section -->
+    <section class="featured-cars">
+        <div class="container">
+            <h2>Featured Vehicles</h2>
+            <p class="section-subtitle">Discover our most popular rental cars</p>
+            <div class="cars-grid">
+                <div class="car-card featured">
+                    <div class="car-badge">Most Popular</div>
+                    <img src="/placeholder.svg?height=200&width=300" alt="Toyota Corolla">
+                    <div class="car-info">
+                        <h3>Toyota Corolla</h3>
+                        <p class="car-type">Economy</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 5 Seats</span>
+                            <span><i class="fas fa-cog"></i> Manual</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                        </div>
+                        <div class="car-price">$25/day</div>
+                        <a href="booking.html?car=Toyota Corolla&price=25" class="rent-btn">Rent Now</a>
+                    </div>
+                </div>
+                <div class="car-card featured">
+                    <div class="car-badge">Luxury</div>
+                    <img src="/placeholder.svg?height=200&width=300" alt="BMW 3 Series">
+                    <div class="car-info">
+                        <h3>BMW 3 Series</h3>
+                        <p class="car-type">Luxury</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 5 Seats</span>
+                            <span><i class="fas fa-cog"></i> Automatic</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                        </div>
+                        <div class="car-price">$75/day</div>
+                        <a href="booking.html?car=BMW 3 Series&price=75" class="rent-btn">Rent Now</a>
+                    </div>
+                </div>
+                <div class="car-card featured">
+                    <div class="car-badge">Family</div>
+                    <img src="/placeholder.svg?height=200&width=300" alt="Honda CR-V">
+                    <div class="car-info">
+                        <h3>Honda CR-V</h3>
+                        <p class="car-type">SUV</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 7 Seats</span>
+                            <span><i class="fas fa-cog"></i> Automatic</span>
+                            <span><i class="fas fa-gas-pump"></i> Hybrid</span>
+                        </div>
+                        <div class="car-price">$55/day</div>
+                        <a href="booking.html?car=Honda CR-V&price=55" class="rent-btn">Rent Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="cars.html" class="cta-button">View All Cars</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Excellent service and great cars! The booking process was smooth and the staff was very helpful."</p>
+                    <div class="customer-info">
+                        <strong>Sarah Johnson</strong>
+                        <span>Business Traveler</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Best car rental experience I've had. Clean cars, fair prices, and excellent customer service."</p>
+                    <div class="customer-info">
+                        <strong>Mike Chen</strong>
+                        <span>Tourist</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"DriveEasy made our family vacation perfect. The SUV was spacious and comfortable for our long trip."</p>
+                    <div class="customer-info">
+                        <strong>Emily Davis</strong>
+                        <span>Family Vacation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-car"></i>
+                        <span>DriveEasy</span>
+                    </div>
+                    <p>Your trusted partner for reliable and affordable car rentals. Experience the freedom of the road with our premium fleet.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Cars</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="cars.html?filter=economy">Economy Cars</a></li>
+                        <li><a href="cars.html?filter=luxury">Luxury Cars</a></li>
+                        <li><a href="cars.html?filter=suv">SUVs</a></li>
+                        <li><a href="#">Long-term Rental</a></li>
+                        <li><a href="#">Corporate Rental</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="contact.html">Customer Support</a></li>
+                        <li><a href="#">Roadside Assistance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DriveEasy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
