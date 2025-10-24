@@ -12,7 +12,8 @@ public class Solution {
             seen.put(nums[i], i);
         }
         
-        // If no solution is found (though the problem guarantees one)
+        //  No solution is found (though the problem guarantees one)
         return new int[] {};
     }
+
 }
